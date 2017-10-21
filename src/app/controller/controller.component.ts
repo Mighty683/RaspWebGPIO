@@ -14,10 +14,13 @@ export class PinController implements OnInit {
   errorMessage: string;
   ngOnInit() { this.getPins(); };
   pins: Pin[];
+  isConnected = false;
+  sortingOrder = "ID";
   getPins(): void {
     this.pinService.getAllPins()
-      .then(
-      pins => this.pins = pins
-    );
+      .then((pins) => {
+        this.pins = pins;
+        this.isConnected = true;
+      });
   };
 }

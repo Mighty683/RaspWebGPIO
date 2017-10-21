@@ -1,5 +1,5 @@
 <div class="sort-pins-container">
-    <h2>
+    <h2 class="text-center">
         App ready, select and sort pins
     </h2>
 
@@ -8,11 +8,15 @@
         <option value='-value'>Value</option>
     </select>
 </div>
-
+<div *ngIf="isConnected else connectingInfo">
 <div class="container">
     <div class="row pins">
         <div class="col-xs-12 col-md-6" *ngFor="let pin of pins | orderBy:sortingOrder">
             <pin [pin]="pin"></pin>
         </div>
     </div>
+</div>
+</div>
+<div class="text-center" #connectingInfo>
+  <h3> App connecting to the server </h3>
 </div>

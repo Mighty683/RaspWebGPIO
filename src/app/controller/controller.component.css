@@ -6,7 +6,6 @@
 
 .sort-pins-container h2 {
     font-size: 24px;
-    text-align: center;
     margin-top: 0;
 }
 
@@ -15,4 +14,7 @@
     color: #EB5E28;
     font-weight: bold;
     cursor: pointer;
+}
+.text-center {
+  text-align: center;
 }

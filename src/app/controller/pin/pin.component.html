@@ -25,7 +25,7 @@
             <div *ngIf="pin.enabled">
                 <div class="element-margin-bottom">
                     <label class="element-margin-bottom">Duty (V): {{pin.value}}</label>
-                    <input id="value" #name="ngModel" name="value" [(ngModel)]="pin.value" min="0" max="1" type="range" step="0.01">
+                    <input *ngIf="!pin.input" id="value" #name="ngModel" name="value" [(ngModel)]="pin.value" min="0" max="1" type="range" step="0.01">
                 </div>
                 <div class="element-margin-bottom">
                     <label>I/O:</label>
